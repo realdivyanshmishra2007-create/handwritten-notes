@@ -1,68 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Handwritten Notes</title>
+    <title>Handwritten Notes | Class 10</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+        }
+
+        header {
+            background: #202b52;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .search {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            background: #202b52;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <h1>📚 My Handwritten Notes</h1>
-        <p>Class 10 • Simple Notes • Board Preparation</p>
+        <h1>📚 Handwritten Notes</h1>
+        <p>Class 10 • CBSE • Board Preparation</p>
     </header>
 
-    <main>
+    <div class="container">
 
-        <h2>Choose Your Subject</h2>
+        <input
+            class="search"
+            type="text"
+            placeholder="🔍 Search your notes..."
+        >
 
         <div class="subjects">
 
             <div class="card">
-                <h3>🧪 Science</h3>
-                <p>Handwritten Science Notes</p>
-                <button onclick="openSubject('Science')">
-                    View Notes
-                </button>
+                <h2>🧪 Science</h2>
+                <p>Chapter-wise handwritten notes</p>
+                <a href="science/science.html">
+    <button>View Notes</button>
+</a>
             </div>
 
             <div class="card">
-                <h3>🌍 Social Science</h3>
+                <h2>🌍 Social Science</h2>
                 <p>History, Geography, Civics & Economics</p>
-                <button onclick="openSubject('SST')">
-                    View Notes
-                </button>
+                <button>View Notes</button>
             </div>
 
             <div class="card">
-                <h3>📐 Mathematics</h3>
-                <p>Chapter-wise Maths Notes</p>
-                <button onclick="openSubject('Maths')">
-                    View Notes
-                </button>
+                <h2>📐 Mathematics</h2>
+                <p>Important concepts and formulas</p>
+                <button>View Notes</button>
             </div>
 
             <div class="card">
-                <h3>📖 English</h3>
-                <p>Literature & Grammar Notes</p>
-                <button onclick="openSubject('English')">
-                    View Notes
-                </button>
+                <h2>📖 English</h2>
+                <p>Literature and grammar notes</p>
+                <button>View Notes</button>
             </div>
 
         </div>
 
-    </main>
+    </div>
 
     <footer>
         <p>Made for Class 10 students ❤️</p>
     </footer>
 
-    <script src="script.js"></script>
-
 </body>
+
 </html>
